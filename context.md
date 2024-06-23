@@ -70,10 +70,11 @@ The response should be a json as in example_payloads/response3.json, which is th
         - ProductPlanResponseItem : ok 
         - Test solution based on provided example (json file)  
     - extra (if time) 
-        - dockerize (as it is the fastest to implement) : dont forget to update README.md 
-        - add CO2 to processor and model as optional parameter in input  
+        - dockerize (as it is the fastest to implement) : dont forget to update README.md : ok 
+        - add CO2 to processor and model as optional parameter in input : i won't code it as i need extra data to validate calculations 
 
 # IMPROVEMENTS 
   - Logger : create an env (arg) -> dedicated class -> dependency injection , then test Logger in test mode + pretty print 
   - Add a git hook to check formatting PEP (pre-commit) and run all tests (pre-push)
-  - Add a uniqueness constraint check on powerplants and other subfields from the payload 
+  - Add a uniqueness constraint check on powerplants and other subfields from the payload
+

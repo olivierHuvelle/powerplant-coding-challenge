@@ -41,3 +41,36 @@ python main.py
 ```
 
 ### Go to the url localhost:8888/docs to use swagger ui :)
+
+## Installation with docker 
+### Clone the repo 
+git clone https://github.com/olivierHuvelle/powerplant-coding-challenge.git
+cd <repository-directory>
+
+### Check docker installation 
+```sh
+ docker --version
+```
+install it if necessary 
+
+### Build the image 
+```sh
+  docker build -t powerplant-app . # or any name you'd prefer of course 
+```
+### Create a container 
+```sh
+ docker run -d -p 8888:8888 --name powerplant-app powerplant-app
+```
+### check if the container is running 
+```sh
+docker ps
+```
+### Access the application 
+```sh
+go to http://localhost:8888/docs 
+```
+
+### run the tests 
+```sh 
+docker run --rm -e RUN_TESTS=true powerplant-app
+```

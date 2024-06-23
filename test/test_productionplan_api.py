@@ -1,9 +1,16 @@
+import os
 import json
 from fastapi.testclient import TestClient
 from main import app
 
-PAYLOAD_FILE = '../example/payload3.json'
-EXPECTED_RESPONSE_FILE = '../example/response3.json'
+IN_DOCKER = os.getenv('IN_DOCKER', 'false').lower() == 'true'
+
+if IN_DOCKER:
+    PAYLOAD_FILE = '/app/example/payload3.json'
+    EXPECTED_RESPONSE_FILE = '/app/example/response3.json'
+else:
+    PAYLOAD_FILE = os.path.join(os.path.dirname(__file__), '../example/payload3.json')
+    EXPECTED_RESPONSE_FILE = os.path.join(os.path.dirname(__file__), '../example/response3.json')
 
 
 def read_json_file(file_path):
