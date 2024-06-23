@@ -59,10 +59,10 @@ The response should be a json as in example_payloads/response3.json, which is th
       - README.md regarding installation : ok 
       - error log management : Logger - Error handler fastapi : ok   
     - input validation (pydantic model) + testing 
-      - pydantic model definitions :  
-      - log the validation errors : 
-      - test validation rules : 
-      - update requirements.txt and context.md :  
+      - pydantic model definitions : ok 
+      - log the validation errors : ok 
+      - test validation rules : ok 
+      - update requirements.txt and context.md : ok   
     - classes management 
         - Fuel  
         - PowerPlant 
@@ -76,3 +76,4 @@ The response should be a json as in example_payloads/response3.json, which is th
 # IMPROVEMENTS 
   - Logger : create an env (arg) -> dedicated class -> dependency injection , then test Logger in test mode + pretty print 
   - Add a git hook to check formatting PEP (pre-commit) and run all tests (pre-push)
+  - Add a uniqueness constraint check on powerplants and other subfields from the payload 
