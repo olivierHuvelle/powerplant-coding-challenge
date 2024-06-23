@@ -3,24 +3,19 @@ from fastapi import FastAPI, Request
 from fastapi.responses import JSONResponse
 from fastapi.exceptions import RequestValidationError
 from starlette.exceptions import HTTPException as StarletteHTTPException
+from typing import List
+
 from Logger import Logger
 from models.ProductionPlanRequest import ProductionPlanRequest
+from models.ProductionPlanResponse import ProductPlanResponseItem
 
 app = FastAPI()
 logger = Logger()
 
 
-@app.post('/productionplan')
+@app.post('/productionplan', response_model=List[ProductPlanResponseItem])
 def get_production_plan(request: ProductionPlanRequest):
-    load = request.load
-    fuels = request.fuels
-    power_plants = request.power_plants
-
-    return {
-        'load': load,
-        'fuels': fuels,
-        'power_plants': power_plants
-    }
+    return request.generate_response()
 
 
 @app.get('/')

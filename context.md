@@ -64,11 +64,11 @@ The response should be a json as in example_payloads/response3.json, which is th
       - test validation rules : ok 
       - update requirements.txt and context.md : ok   
     - classes management 
-        - Fuel  
-        - PowerPlant 
-        - ProductionPlanRequest 
-        - ProductPlanResponseItem
-        - Test solution based on provided example (json file) 
+        - Fuel  : ok 
+        - PowerPlant : ok 
+        - ProductionPlanRequest : ok  
+        - ProductPlanResponseItem : ok 
+        - Test solution based on provided example (json file)  
     - extra (if time) 
         - dockerize (as it is the fastest to implement) : dont forget to update README.md 
         - add CO2 to processor and model as optional parameter in input  

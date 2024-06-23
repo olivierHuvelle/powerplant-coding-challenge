@@ -39,3 +39,5 @@ Confer supra
 ```sh
 python main.py 
 ```
+
+### Go to the url localhost:8888/docs to use swagger ui :)
